@@ -1,0 +1,31 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Node (voor als je later een build-stap toevoegt)
+node_modules/
+dist/
+build/
+.cache/
+
+# Env
+.env
+.env.local
+.env.*.local
