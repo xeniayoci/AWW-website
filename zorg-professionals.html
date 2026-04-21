@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zorg — Professionals — Academische Werkplaatsen Wijkverpleging</title>
+    <title>Zorgprofessionals — Academische Werkplaatsen Wijkverpleging</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,7 +12,7 @@
 <header class="site-header">
     <div class="container">
         <a href="index.html" class="brand">
-            <span class="brand-mark" aria-hidden="true">A</span>
+            <img class="brand-mark" src="logo.png" alt="" aria-hidden="true">
             <span class="brand-text">
                 <small>Academische Werkplaatsen</small>
                 Wijkverpleging Nederland
@@ -23,8 +24,8 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="client-centraal.html">Cliënt Centraal</a></li>
                 <li><a href="wijkgerichte-preventie.html">Wijkgerichte preventie</a></li>
-                <li><a href="zorg-innovatie.html">Zorg &mdash; Innovatie</a></li>
-                <li><a href="zorg-professionals.html" aria-current="page">Zorg &mdash; Professionals</a></li>
+                <li><a href="zorg-innovatie.html">Zorginnovatie</a></li>
+                <li><a href="zorg-professionals.html" aria-current="page">Zorgprofessionals</a></li>
                 <li><a href="regionale-partners.html">Regionale partners</a></li>
                 <li><a href="team.html">Team</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -36,7 +37,7 @@
 <div class="page-header">
     <div class="container">
         <p class="crumb">Themalijn</p>
-        <h1>Zorg — Professionals</h1>
+        <h1>Zorgprofessionals</h1>
     </div>
 </div>
 
@@ -50,57 +51,81 @@
             <h2>Lopende regionale onderzoeken en projecten</h2>
 
             <div class="grid">
-                <article class="card">
-                    <span class="meta">AWW Noord</span>
-                    <h3>Aansluiting onderwijs en praktijk</h3>
-                    <p>We brengen het beeld van mbo-v- en hbo-v-studenten en docenten in kaart en gaan in gesprek met onderwijs en wijkverpleging om te verkennen hoe het curriculum en de stagebegeleiding verder versterkt kunnen worden.</p>
-                </article>
-
-                <article class="card">
-                    <span class="meta">AWW Limburg</span>
-                    <h3>Praktijkvariatie in indicatiestelling</h3>
-                    <p>Er zijn signalen dat wijkverpleegkundigen bij vergelijkbare cliënten verschillende zorg indiceren. Het onderzoek brengt deze praktijkvariatie in kaart en biedt aanknopingspunten om de indicatiestelling te verbeteren en ongewenste praktijkvariatie te verminderen.</p>
-                </article>
-
-                <article class="card">
-                    <span class="meta">AWW Limburg</span>
-                    <h3>Handreiking probleemgedrag in de wijk</h3>
-                    <p>Ontwikkeling van een handreiking voor V&amp;V bij probleemgedrag in de wijk.</p>
-                </article>
-            </div>
-
-            <article class="card" style="margin-top: 1.5rem;">
-                <span class="meta">AWW Noord Holland</span>
-                <h3>Leren en ontwikkelen in de wijk</h3>
-                <p>Uit onderzoek van de MBO Raad blijkt dat het aantal afgestudeerde mbo-verpleegkundigen en verzorgenden IG dat instroomt in de zorg beperkt is. Veel studenten richten zich bij de start van hun opleiding vooral op de intramurale zorg. De wijkzorg is onder studenten nog relatief onbekend. Dat vraagt om aandacht voor de wijkverpleging in het mbo- en hbo-onderwijs.</p>
-                <p>De Academische Werkplaats Wijkverpleging Noord-Holland heeft drie Lecturer Practitioners aangesteld om de verbinding tussen onderzoek, onderwijs en de praktijk in de wijkzorg te versterken. Zorgmedewerkers, studenten en docenten werken samen aan het ontwikkelen en onderzoeken van nieuwe manieren om de zorg in de wijk te verbeteren.</p>
+            <article class="card" data-region="noord">
+                <span class="meta">AWW Noord</span>
+                <h3>Aansluiting onderwijs en praktijk</h3>
+                <p>We brengen het beeld van mbo-v- en hbo-v-studenten en docenten in kaart en gaan in gesprek met onderwijs en wijkverpleging om te verkennen hoe het curriculum en de stagebegeleiding verder versterkt kunnen worden.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>De uitkomsten worden gebundeld in concrete aanbevelingen en handvatten voor opleidingen en zorgorganisaties, zodat opleidingsroutes en stageplekken in de wijkverpleging aantrekkelijker en beter passend worden voor zowel studenten als de praktijk.</p>
+                </details>
             </article>
 
-            <article class="card" style="margin-top: 1.5rem;">
+            <article class="card" data-region="limburg">
+                <span class="meta">AWW Limburg</span>
+                <h3>Praktijkvariatie in indicatiestelling</h3>
+                <p>Er zijn signalen dat wijkverpleegkundigen bij vergelijkbare cliënten verschillende zorg indiceren. Het onderzoek brengt deze praktijkvariatie in kaart en biedt aanknopingspunten om de indicatiestelling te verbeteren en ongewenste praktijkvariatie te verminderen.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>De bevindingen worden gedeeld met wijkverpleegkundigen, opleidingen en zorgorganisaties, met het doel bij te dragen aan een meer uniforme en onderbouwde indicatiestelling — gericht op kwaliteit van zorg en doelmatige inzet van capaciteit.</p>
+                </details>
+            </article>
+
+            <article class="card" data-region="limburg">
+                <span class="meta">AWW Limburg</span>
+                <h3>Handreiking probleemgedrag in de wijk</h3>
+                <p>Ontwikkeling van een handreiking voor verpleegkundigen en verzorgenden bij probleemgedrag in de wijk. De handreiking bundelt kennis, praktijkervaring en gerichte adviezen zodat professionals probleemgedrag eerder kunnen herkennen en passend kunnen reageren in de thuissituatie.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>Daarbij wordt nadrukkelijk aangesloten bij ervaringen van wijkteams en mantelzorgers, zodat de handreiking aansluit op wat in de dagelijkse praktijk nodig is.</p>
+                </details>
+            </article>
+
+            <article class="card" data-region="noord-holland">
+                <span class="meta">AWW Noord Holland</span>
+                <h3>Leren en ontwikkelen in de wijk</h3>
+                <p>Uit onderzoek van de MBO Raad blijkt dat het aantal afgestudeerde mbo-verpleegkundigen en verzorgenden IG dat instroomt in de zorg beperkt is. Veel studenten richten zich bij de start van hun opleiding vooral op de intramurale zorg.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>De wijkzorg is onder studenten nog relatief onbekend. Dat vraagt om aandacht voor de wijkverpleging in het mbo- en hbo-onderwijs.</p>
+                    <p>De Academische Werkplaats Wijkverpleging Noord-Holland heeft drie Lecturer Practitioners aangesteld om de verbinding tussen onderzoek, onderwijs en de praktijk in de wijkzorg te versterken. Zorgmedewerkers, studenten en docenten werken samen aan het ontwikkelen en onderzoeken van nieuwe manieren om de zorg in de wijk te verbeteren.</p>
+                </details>
+            </article>
+
+            <article class="card" data-region="noord-holland">
                 <span class="meta">AWW Noord Holland</span>
                 <h3>Onderzoek Volledig Pakket Thuis (VPT)</h3>
                 <p>De komende jaren neemt het aantal kwetsbare ouderen met een langdurige zorgvraag toe. Ouderen hebben vaak de wens om zelfstandig thuis te blijven wonen. Het Volledig Pakket Thuis (VPT) biedt o.a. verpleging, persoonlijke verzorging, welzijn, huishoudelijke hulp, persoonsalarmering en maaltijden.</p>
-                <h4>Doel</h4>
-                <ul>
-                    <li>Het in kaart brengen van de ervaringen van zorgprofessionals, cliënten en mantelzorgers.</li>
-                    <li>Het in kaart brengen van de organisatie van VPT-zorg.</li>
-                    <li>Het doorontwikkelen van VPT-zorg op basis van bovenstaande bevindingen.</li>
-                </ul>
-                <h4>Methode</h4>
-                <p>In interviews met zorgprofessionals, cliënten en mantelzorgers wordt gevraagd naar ervaringen. Daarnaast een online vragenlijst voor managers/beleidsmakers. In najaar 2025 wordt een pilot opgezet voor de doorontwikkeling van het VPT binnen enkele zorgteams van deelnemende organisaties.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <h4>Doel</h4>
+                    <ul>
+                        <li>Het in kaart brengen van de ervaringen van zorgprofessionals, cliënten en mantelzorgers.</li>
+                        <li>Het in kaart brengen van de organisatie van VPT-zorg.</li>
+                        <li>Het doorontwikkelen van VPT-zorg op basis van bovenstaande bevindingen.</li>
+                    </ul>
+                    <h4>Methode</h4>
+                    <p>In interviews met zorgprofessionals, cliënten en mantelzorgers wordt gevraagd naar ervaringen. Daarnaast een online vragenlijst voor managers/beleidsmakers. In najaar 2025 wordt een pilot opgezet voor de doorontwikkeling van het VPT binnen enkele zorgteams van deelnemende organisaties.</p>
+                </details>
             </article>
 
-            <article class="card" style="margin-top: 1.5rem;">
+            <article class="card" data-region="nijmegen">
                 <span class="meta">AWW Nijmegen</span>
                 <h3>LOUIS — Leren en Ontwikkelen van infectiepreventie in de thuissituatie</h3>
-                <p>In de wijkverpleging neemt 'invasieve' zorg toe (infuuszorg, complexe wondzorg, urinewegkatheters, peritoneale dialyse, thuisbeademing) en groeit de antimicrobiële resistentie. De verwachting is dat in 2050 antimicrobiële resistentie weer in de top 5 van meest voorkomende doodsoorzaken staat.</p>
-                <h4>Doel — ten aanzien van handhygiëne en Goed Gebruik Handschoenen (GGH)</h4>
-                <ul>
-                    <li>Het verbeteren van het onderwijs voor studenten verpleegkundige (HBO-V).</li>
-                    <li>Het verbeteren van de kennis van zorgmedewerkers.</li>
-                    <li>Inzicht verkrijgen in de naleving door het formuleren en testen van een stage-opdracht op uitvoerbaarheid, acceptabiliteit, haalbaarheid en schaalbaarheid.</li>
-                </ul>
+                <p>In de wijkverpleging neemt 'invasieve' zorg toe (infuuszorg, complexe wondzorg, urinewegkatheters, peritoneale dialyse, thuisbeademing) en groeit de antimicrobiële resistentie.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>De verwachting is dat in 2050 antimicrobiële resistentie weer in de top 5 van meest voorkomende doodsoorzaken staat.</p>
+                    <h4>Doel — ten aanzien van handhygiëne en Goed Gebruik Handschoenen (GGH)</h4>
+                    <ul>
+                        <li>Het verbeteren van het onderwijs voor studenten verpleegkundige (HBO-V).</li>
+                        <li>Het verbeteren van de kennis van zorgmedewerkers.</li>
+                        <li>Inzicht verkrijgen in de naleving door het formuleren en testen van een stage-opdracht op uitvoerbaarheid, acceptabiliteit, haalbaarheid en schaalbaarheid.</li>
+                    </ul>
+                    <p>Resultaten worden teruggekoppeld naar onderwijspartners en zorgorganisaties, zodat aandacht voor infectiepreventie structureel wordt verankerd in opleiding én praktijk van de wijkverpleging.</p>
+                </details>
             </article>
+            </div>
         </section>
     </div>
 </main>
