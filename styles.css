@@ -1,24 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
+    /* Warm, soft base — kept from the original design */
     --color-bg: #f7f4ed;
     --color-bg-alt: #efe9dc;
     --color-surface: #ffffff;
-    --color-ink: #14312c;
-    --color-ink-soft: #2a4a43;
-    --color-muted: #6b7b77;
-    --color-accent: #1f6f63;
-    --color-accent-dark: #124a42;
-    --color-accent-soft: #d6ece6;
-    --color-warm: #e8b86b;
+    --color-ink: #2a1a10;
+    --color-ink-soft: #4a3325;
+    --color-muted: #7a6b62;
+
+    /* Orange accent — inspired by awwijkverpleging.nl */
+    --color-accent: #e69862;
+    --color-accent-dark: #c4763e;
+    --color-accent-soft: #fbe7d6;
+
+    /* Warm complement (deeper terracotta) */
+    --color-warm: #d97a4a;
     --color-warm-soft: #f7e6c7;
-    --color-border: #e3dccb;
-    --color-border-soft: #ece6d6;
+
+    --color-border: #e9dfcc;
+    --color-border-soft: #f1e9d8;
     --radius: 10px;
     --radius-lg: 18px;
-    --shadow-sm: 0 1px 2px rgba(20, 49, 44, 0.04);
-    --shadow: 0 2px 4px rgba(20, 49, 44, 0.05), 0 8px 24px rgba(20, 49, 44, 0.06);
-    --shadow-lg: 0 8px 16px rgba(20, 49, 44, 0.06), 0 24px 48px rgba(20, 49, 44, 0.08);
+    --shadow-sm: 0 1px 2px rgba(60, 30, 10, 0.04);
+    --shadow: 0 2px 4px rgba(60, 30, 10, 0.05), 0 8px 24px rgba(60, 30, 10, 0.06);
+    --shadow-lg: 0 8px 16px rgba(60, 30, 10, 0.06), 0 24px 48px rgba(60, 30, 10, 0.08);
     --container: 74rem;
     --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
     --font-head: "Fraunces", "Georgia", serif;
@@ -148,7 +154,7 @@ p { margin: 0 0 0.75rem; }
     color: var(--color-accent-dark);
 }
 .site-nav a[aria-current="page"] {
-    background: var(--color-ink);
+    background: var(--color-accent);
     color: #fff;
 }
 .nav-toggle {
@@ -168,8 +174,8 @@ p { margin: 0 0 0.75rem; }
 .hero {
     position: relative;
     background:
-        radial-gradient(ellipse at top right, rgba(232, 184, 107, 0.15), transparent 55%),
-        radial-gradient(ellipse at bottom left, rgba(31, 111, 99, 0.12), transparent 50%),
+        radial-gradient(ellipse at top right, rgba(230, 152, 98, 0.22), transparent 55%),
+        radial-gradient(ellipse at bottom left, rgba(217, 122, 74, 0.12), transparent 50%),
         linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
     padding: 4.5rem 0 3.5rem;
     overflow: hidden;
@@ -178,7 +184,7 @@ p { margin: 0 0 0.75rem; }
     content: "";
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle at 20% 50%, rgba(31, 111, 99, 0.05) 0, transparent 2px);
+    background-image: radial-gradient(circle at 20% 50%, rgba(196, 118, 62, 0.05) 0, transparent 2px);
     background-size: 28px 28px;
     opacity: 0.6;
     pointer-events: none;
@@ -236,7 +242,7 @@ p { margin: 0 0 0.75rem; }
     position: relative;
     padding: 2.5rem 0 1.25rem;
     background:
-        radial-gradient(ellipse at top right, rgba(232, 184, 107, 0.12), transparent 60%),
+        radial-gradient(ellipse at top right, rgba(230, 152, 98, 0.18), transparent 60%),
         linear-gradient(180deg, var(--color-bg-alt), var(--color-bg));
     border-bottom: 1px solid var(--color-border);
     margin-bottom: 0;
@@ -502,7 +508,7 @@ main { padding-bottom: 5rem; }
     object-fit: cover;
     flex-shrink: 0;
     background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
-    box-shadow: 0 2px 6px rgba(20, 49, 44, 0.12);
+    box-shadow: 0 2px 6px rgba(60, 30, 10, 0.12);
     border: 2px solid #fff;
 }
 .person-body { min-width: 0; }
@@ -640,7 +646,7 @@ main { padding-bottom: 5rem; }
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: var(--color-ink);
+    background: var(--color-accent);
     color: #fff;
     border: 0;
     padding: 0.8rem 1.5rem;
@@ -651,31 +657,103 @@ main { padding-bottom: 5rem; }
     text-decoration: none;
     cursor: pointer;
     transition: transform var(--transition), background var(--transition), box-shadow var(--transition);
-    box-shadow: 0 2px 8px rgba(20, 49, 44, 0.15);
+    box-shadow: 0 2px 8px rgba(196, 118, 62, 0.22);
 }
 .button:hover {
-    background: var(--color-accent);
+    background: var(--color-accent-dark);
     color: #fff;
     transform: translateY(-1px);
-    box-shadow: 0 4px 14px rgba(31, 111, 99, 0.3);
+    box-shadow: 0 4px 14px rgba(196, 118, 62, 0.32);
 }
 .button.secondary {
     background: transparent;
-    color: var(--color-ink);
-    border: 1px solid var(--color-ink);
+    color: var(--color-accent-dark);
+    border: 1px solid var(--color-accent);
     box-shadow: none;
 }
 .button.secondary:hover {
-    background: var(--color-ink);
+    background: var(--color-accent);
     color: #fff;
 }
 .button::after { content: "→"; transition: transform var(--transition); }
 .button:hover::after { transform: translateX(3px); }
 
+/* ============================================================
+   Netherlands map (homepage)
+   ============================================================ */
+.nl-map-section { margin-top: 1rem; }
+.nl-map {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-lg);
+    padding: 2rem 2.25rem;
+    box-shadow: var(--shadow-sm);
+}
+.nl-map-svg {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    /* Object element fallback styling */
+    border: 0;
+    background: transparent;
+    aspect-ratio: 200 / 236;
+}
+
+.nl-map-legend {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.nl-map-legend li { margin: 0; }
+.nl-map-legend a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: 999px;
+    color: var(--color-ink-soft);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+.nl-map-legend a:hover {
+    background: var(--color-bg-alt);
+    color: var(--color-ink);
+    transform: translateX(2px);
+}
+.nl-map-legend .legend-dot {
+    width: 0.85rem;
+    height: 0.85rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 2px #fff, 0 1px 3px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 720px) {
+    .nl-map {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+    .nl-map-svg { max-width: 280px; }
+    .nl-dot-label { opacity: 1; }
+}
+
 /* Funders block (homepage) */
 .funders {
-    background: linear-gradient(135deg, var(--color-ink) 0%, var(--color-accent-dark) 100%);
-    color: #e7f0ee;
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-warm) 100%);
+    color: #fff;
     border-radius: var(--radius-lg);
     padding: 2.5rem 2rem;
     margin-top: 4rem;
@@ -689,7 +767,7 @@ main { padding-bottom: 5rem; }
     top: -4rem; right: -4rem;
     width: 16rem; height: 16rem;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(232, 184, 107, 0.2), transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.22), transparent 70%);
 }
 .funders h2 {
     margin: 0 0 0.75rem;
@@ -698,7 +776,8 @@ main { padding-bottom: 5rem; }
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: var(--color-warm);
+    color: #fff;
+    opacity: 0.9;
 }
 .funders p {
     margin: 0;
@@ -708,12 +787,12 @@ main { padding-bottom: 5rem; }
     color: #fff;
     position: relative;
 }
-.funders strong { color: var(--color-warm); font-weight: 500; }
+.funders strong { color: #fff; font-weight: 600; }
 
 /* Footer */
 .site-footer {
-    background: var(--color-ink);
-    color: #b8c6c3;
+    background: #2a1a10;
+    color: #d9c8b8;
     padding: 3.5rem 0 2rem;
     margin-top: 5rem;
     position: relative;
@@ -723,10 +802,10 @@ main { padding-bottom: 5rem; }
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--color-warm), transparent);
-    opacity: 0.3;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    opacity: 0.5;
 }
-.site-footer a { color: #9ccfc8; text-decoration: none; }
+.site-footer a { color: #f4cfa9; text-decoration: none; }
 .site-footer a:hover { color: #fff; text-decoration: underline; }
 .site-footer .footer-grid {
     display: grid;
@@ -749,7 +828,7 @@ main { padding-bottom: 5rem; }
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding-top: 1.25rem;
     font-size: 0.85rem;
-    color: #7a8c89;
+    color: #9b8775;
 }
 
 /* Responsive */
