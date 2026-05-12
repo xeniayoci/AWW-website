@@ -35,6 +35,9 @@
 
 html { scroll-behavior: smooth; }
 
+/* Offset for sticky header when jumping to in-page anchors */
+[id] { scroll-margin-top: 5.5rem; }
+
 body {
     margin: 0;
     font-family: var(--font-body);
