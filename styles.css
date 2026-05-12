@@ -679,48 +679,77 @@ main { padding-bottom: 5rem; }
 .button:hover::after { transform: translateX(3px); }
 
 /* ============================================================
-   Region pills + filtered project page
+   Filter pills + projecten page
    ============================================================ */
 .page-subtitle {
     margin: 0.5rem 0 0;
     color: var(--color-ink-soft);
     font-size: 1.05rem;
-    max-width: 42rem;
+    max-width: 44rem;
 }
-.region-pills {
-    list-style: none;
-    padding: 0;
-    margin: 1.5rem 0 0;
+
+.filter-group {
+    margin-top: 1.5rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 0.6rem 0.85rem;
 }
-.region-pill {
+.filter-group + .filter-group {
+    margin-top: 0.85rem;
+}
+.filter-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-muted);
+    margin-right: 0.25rem;
+    min-width: 5.5rem;
+}
+.filter-pills {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+.filter-pill {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 0.95rem;
+    padding: 0.42rem 0.9rem;
     background: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: 999px;
     color: var(--color-ink);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 500;
-    transition: background var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    transition: background var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition), color var(--transition);
 }
-.region-pill:hover {
+.filter-pill:hover {
     border-color: var(--color-accent);
+    color: var(--color-accent-dark);
     transform: translateY(-1px);
     box-shadow: var(--shadow-sm);
 }
-.region-pill.is-active {
+.filter-pill.is-active {
     background: var(--color-ink);
     color: #fff;
     border-color: var(--color-ink);
 }
-.region-pill.is-active .pill-dot {
+.filter-pill.is-active:hover {
+    color: #fff;
+    border-color: var(--color-ink);
+}
+.filter-pill.is-active .pill-dot {
     box-shadow: 0 0 0 2px rgba(255,255,255,0.3);
+}
+.filter-pill-all {
+    background: var(--color-bg-alt);
+    font-weight: 600;
 }
 .pill-dot {
     width: 0.7rem;
@@ -729,42 +758,52 @@ main { padding-bottom: 5rem; }
     flex-shrink: 0;
     box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
 }
-.region-pill-all {
-    background: var(--color-bg-alt);
+
+.filter-status {
+    margin: 1.25rem 0 0;
+    color: var(--color-ink-soft);
+    font-size: 0.92rem;
+}
+.filter-status strong {
+    color: var(--color-accent-dark);
+    font-weight: 600;
 }
 
-.region-section { padding-top: 1.5rem; }
-.region-section + .region-section {
+.theme-section { padding-top: 1.5rem; }
+.theme-section + .theme-section {
     border-top: 1px solid var(--color-border-soft);
     margin-top: 2rem;
     padding-top: 2rem;
 }
-.region-section h2 {
-    margin-top: 0;
+.theme-section h2 { margin-top: 0; }
+.theme-intro {
+    max-width: 44rem;
+    color: var(--color-ink-soft);
+    font-size: 1.05rem;
+    margin: 0.25rem 0 1.5rem;
 }
-.region-theme-heading {
-    margin: 1.75rem 0 0.5rem;
-    font-family: var(--font-body);
-    font-size: 0.78rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--color-accent-dark);
-}
-.region-theme-heading a {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px dotted var(--color-accent);
-}
-.region-theme-heading a:hover {
-    color: var(--color-accent);
-}
-.region-empty {
-    padding: 1.5rem 1.75rem;
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 2rem;
     background: var(--color-bg-alt);
     border-radius: var(--radius-lg);
-    color: var(--color-muted);
-    font-style: italic;
+    border: 1px dashed var(--color-border);
+    margin: 2rem 0;
+}
+.empty-state h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+}
+.empty-state p {
+    margin: 0 auto 1.5rem;
+    max-width: 32rem;
+    color: var(--color-ink-soft);
+}
+
+@media (max-width: 720px) {
+    .filter-label { min-width: 0; flex-basis: 100%; }
+    .filter-group { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
 }
 
 /* ============================================================
@@ -774,18 +813,18 @@ main { padding-bottom: 5rem; }
 .nl-map {
     margin-top: 1.5rem;
     display: grid;
-    grid-template-columns: minmax(280px, 1fr) 1fr;
-    gap: 2.5rem;
+    grid-template-columns: minmax(380px, 1.6fr) minmax(220px, 1fr);
+    gap: 3rem;
     align-items: center;
     background: var(--color-surface);
     border: 1px solid var(--color-border-soft);
     border-radius: var(--radius-lg);
-    padding: 2rem 2.25rem;
+    padding: 2.5rem 3rem;
     box-shadow: var(--shadow-sm);
 }
 .nl-map-svg {
     width: 100%;
-    max-width: 360px;
+    max-width: 540px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -829,14 +868,17 @@ main { padding-bottom: 5rem; }
     box-shadow: 0 0 0 2px #fff, 0 1px 3px rgba(0,0,0,0.15);
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
     .nl-map {
         grid-template-columns: 1fr;
-        gap: 1rem;
-        padding: 1.5rem;
+        gap: 1.5rem;
+        padding: 2rem;
     }
-    .nl-map-svg { max-width: 280px; }
-    .nl-dot-label { opacity: 1; }
+    .nl-map-svg { max-width: 420px; }
+}
+@media (max-width: 560px) {
+    .nl-map { padding: 1.5rem; }
+    .nl-map-svg { max-width: 320px; }
 }
 
 /* Funders block (homepage) */

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projecten — Academische Werkplaatsen Wijkverpleging</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <a href="index.html" class="brand">
+            <img class="brand-mark" src="logo.png" alt="" aria-hidden="true">
+            <span class="brand-text">
+                <small>Academische Werkplaatsen</small>
+                Wijkverpleging Nederland
+            </span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+        <nav class="site-nav" id="main-nav" aria-label="Hoofdnavigatie">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projecten.html" aria-current="page">Projecten</a></li>
+                <li><a href="regionale-partners.html">Regionale partners</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="page-header">
+    <div class="container">
+        <p class="crumb">Projecten</p>
+        <h1 id="page-title">Projecten</h1>
+        <p class="page-subtitle" id="page-subtitle">Bekijk alle projecten van de vijf Academische Werkplaatsen Wijkverpleging. Filter op themalijn of op regio om gericht te zoeken.</p>
+
+        <div class="filter-group" aria-label="Filter op themalijn">
+            <span class="filter-label">Themalijn:</span>
+            <ul class="filter-pills">
+                <li><a href="?" class="filter-pill filter-pill-all" data-theme-pill="all">Alle thema's</a></li>
+                <li><a href="?thema=client-centraal" class="filter-pill" data-theme-pill="client-centraal">Cliënt Centraal</a></li>
+                <li><a href="?thema=wijkgerichte-preventie" class="filter-pill" data-theme-pill="wijkgerichte-preventie">Wijkgerichte preventie</a></li>
+                <li><a href="?thema=zorg-innovatie" class="filter-pill" data-theme-pill="zorg-innovatie">Zorginnovatie</a></li>
+                <li><a href="?thema=zorg-professionals" class="filter-pill" data-theme-pill="zorg-professionals">Zorgprofessionals</a></li>
+            </ul>
+        </div>
+
+        <div class="filter-group" aria-label="Filter op regio">
+            <span class="filter-label">Regio:</span>
+            <ul class="filter-pills">
+                <li><a href="?" class="filter-pill filter-pill-all" data-region-pill="all">Alle regio's</a></li>
+                <li><a href="?regio=noord-holland" class="filter-pill" data-region-pill="noord-holland"><span class="pill-dot" style="background:#D55E00"></span>AWW Noord-Holland</a></li>
+                <li><a href="?regio=noord" class="filter-pill" data-region-pill="noord"><span class="pill-dot" style="background:#0072B2"></span>AWW Noord</a></li>
+                <li><a href="?regio=utrecht" class="filter-pill" data-region-pill="utrecht"><span class="pill-dot" style="background:#009E73"></span>AWW Utrecht</a></li>
+                <li><a href="?regio=nijmegen" class="filter-pill" data-region-pill="nijmegen"><span class="pill-dot" style="background:#E69F00"></span>AWW Nijmegen</a></li>
+                <li><a href="?regio=limburg" class="filter-pill" data-region-pill="limburg"><span class="pill-dot" style="background:#CC79A7"></span>AWW Limburg</a></li>
+            </ul>
+        </div>
+
+        <p class="filter-status" id="filter-status" aria-live="polite"></p>
+    </div>
+</div>
+
+<main>
+    <div class="container">
+        <section class="section theme-section" data-theme-section="client-centraal">
+            <h2>Cliënt Centraal</h2>
+            <p class="theme-intro">Centraal in dit thema staat gezamenlijke besluitvorming over zorg, proactieve zorgplanning en de betrokkenheid van naasten. De projecten richten zich op het versterken van de positie van de cliënt en zijn omgeving in de wijkverpleging.</p>
+            <div class="grid">
+                <article class="card" data-theme="client-centraal" data-region="noord">
+                <span class="meta">AWW Noord</span>
+                <h3>Scenario-ontwikkeling vanuit het perspectief mantelzorg</h3>
+                <p>Gericht op competentieontwikkeling voor wijkverpleegkundigen in gesprekken over mantelzorg en scenario's voor simulatieleren.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>Door scenario's samen met mantelzorgers en wijkverpleegkundigen te ontwikkelen, ontstaat materiaal dat nauw aansluit op de dagelijkse praktijk. Het eindresultaat is bruikbaar in onderwijs, bij- en nascholing en teamreflectie.</p>
+                </details>
+            </article>
+                <article class="card" data-theme="client-centraal" data-region="limburg">
+                <span class="meta">AWW Limburg</span>
+                <h3>Accent — kennis &amp; kunde over essentiële zorg</h3>
+                <p>Het bekrachtigen van gedrag, competenties en professionaliteit van verpleegkundigen en verzorgenden om, tijdens de ADL-zorg, de autonomie van de oudere cliënt centraal te stellen. Betrokkenheid van professionals uit ziekenhuis, verpleeghuis en wijkzorg (niveaus 2–8).</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>Door deze brede samenwerking tussen zorgsectoren en opleidingsniveaus wordt kennis over essentiële zorg structureel verankerd in zowel de praktijk als het onderwijs.</p>
+                </details>
+            </article>
+                <article class="card" data-theme="client-centraal" data-region="utrecht">
+                <span class="meta">AWW Utrecht</span>
+                <h3>Redsaam — samen werken aan zelfredzaamheid</h3>
+                <p>Focus op zelfredzaamheid en eigen regie van ouderen thuis. Binnen vijf jaar is er een gezamenlijk gedragen programmatische netwerkaanpak ontwikkeld en geëvalueerd.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>Cliënten, mantelzorgers, zorgprofessionals en welzijnspartners werken samen aan interventies die passen bij de leefsituatie van ouderen en hun netwerk. De opgedane inzichten worden gedeeld binnen het regionale netwerk zodat succesvolle werkwijzen breder toegepast kunnen worden.</p>
+                </details>
+            </article>
+            </div>
+        </section>
+        <section class="section theme-section" data-theme-section="wijkgerichte-preventie">
+            <h2>Wijkgerichte preventie</h2>
+            <p class="theme-intro">Deze themalijn richt zich op het voorkomen van ziekte, achteruitgang en acute zorgbehoefte. Onderwerpen zijn vroegsignalering, leefstijl, valpreventie, eenzaamheid en samenwerking in de wijk.</p>
+            <div class="grid">
+                <article class="card" data-theme="wijkgerichte-preventie" data-region="utrecht">
+                <span class="meta">AWW Utrecht</span>
+                <h3>Wijkleefstijlnetwerk Leidsche Rijn</h3>
+                <p>De druk op de gezondheidszorg neemt toe. Het aantal ouderen en mensen met multimorbiditeit groeit en tegelijkertijd is er een groeiend tekort aan zorgprofessionals. Om de zorg en ondersteuning toegankelijk en betaalbaar te houden, staat preventie en de focus op gedrag en gezondheid centraal.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <h4>Doel</h4>
+                    <p>In dit project werken we aan het opzetten en doorontwikkelen van een integrale wijkgerichte aanpak 'Gezonde Leefstijl'. Een aanpak die aansluit bij de wensen en behoefte van bewoners, patiënten en professionals én mensen stimuleert om samen aan de slag te gaan.</p>
+                    <h4>Resultaten</h4>
+                    <ul>
+                        <li>Een generieke en wijkgerichte integrale aanpak 'Gezonde Leefstijl' in Leidsche Rijn.</li>
+                        <li>Een online platform waarop de erkende leefstijlinterventies en de informele leefstijlactiviteiten inzichtelijk zijn voor bewoners en professionals.</li>
+                        <li>Een continue monitoring van effecten op de geïntegreerde gezondheidsdata en evaluatiedata (learning preventive healthsystem).</li>
+                    </ul>
+                </details>
+            </article>
+                <article class="card" data-theme="wijkgerichte-preventie" data-region="utrecht">
+                <span class="meta">AWW Utrecht</span>
+                <h3>Onderzoek 'Acute ouderenzorg'</h3>
+                <p>Onderzoek naar vroegsignalering bij thuiswonende ouderen: welke ervaringen, rollen en factoren spelen een rol in de aanloop naar een acute opname?</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>Het onderzoek kent meerdere doelen, waaronder inzicht krijgen in:</p>
+                    <ul>
+                        <li>de ervaringen van thuiswonende cliënten en zorgverleners voorafgaand aan een acute opname;</li>
+                        <li>ieders rol in de aanloop naar de opname;</li>
+                        <li>factoren die bijgedragen hebben aan de noodzaak tot opname.</li>
+                    </ul>
+                    <h4>Methode</h4>
+                    <p>Acute opnames worden retrospectief geanalyseerd door middel van een tijdlijn van de periode voor opname, op basis van gegevens uit het patiëntendossier en interviews met de zorgvrager, diens naasten en de zorgprofessionals uit het thuiszorgteam.</p>
+                </details>
+            </article>
+                <article class="card" data-theme="wijkgerichte-preventie" data-region="noord-holland">
+                <span class="meta">AWW Noord Holland</span>
+                <h3>Onderzoek Wijkgerichte Preventie</h3>
+                <p>Er is nog weinig bekend wat thuiswonende ouderen, ter bevordering van het zelfstandig functioneren in huis en de wijk, nodig hebben aan preventieve interventies op wijkniveau. Daarom willen we met dit onderzoek beter begrijpen welke preventieve interventies in de wijk zij belangrijk vinden ter bevordering van hun zelfredzaamheid.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <h4>Methode</h4>
+                    <p>De doelgroep bestaat uit thuiswonende ouderen (&gt; 65 jaar) met wijkverpleging, thuiswonende ouderen zonder wijkverpleging en thuiswonende ouderen die bekend zijn bij het sociaal wijkteam. Het onderzoek bestaat uit interviews, gecombineerd met korte scenario's (Vignettes).</p>
+                </details>
+            </article>
+                <article class="card" data-theme="wijkgerichte-preventie" data-region="noord-holland">
+                <span class="meta">AWW Noord Holland</span>
+                <h3>OmU@Home</h3>
+                <p>Onderzoek naar ondersteuning van ouderen met een multidisciplinaire zorgvraag thuis.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>Het project richt zich op het in kaart brengen van wat ouderen, hun naasten en zorgprofessionals nodig hebben om complexe zorg thuis goed te laten verlopen. De inzichten dienen als basis voor interventies die de samenwerking tussen disciplines rondom de oudere versterken.</p>
+                </details>
+            </article>
+                <article class="card" data-theme="wijkgerichte-preventie" data-region="utrecht">
+                <span class="meta">AWW Utrecht</span>
+                <h3>Learn</h3>
+                <p>Beter Doen Beter Laten (BDBL) handelingen (de)implementeren rondom ADL-zorg, wondzorg/smetten en katheterzorg in wijkverpleging, geriatrische revalidatie en verpleeghuiszorg. Minder handelingen zonder toegevoegde waarde betekent minder complicaties, tijdwinst en lagere CO<sub>2</sub>-uitstoot.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>Binnen het project wordt per handeling onderzocht hoe teams deze structureel kunnen afbouwen zonder kwaliteitsverlies, en welke ondersteuning daarvoor nodig is in opleiding, roosters en teambesprekingen.</p>
+                </details>
+            </article>
+                <article class="card" data-theme="wijkgerichte-preventie" data-region="nijmegen">
+                <span class="meta">AWW Nijmegen</span>
+                <h3>HOME ART</h3>
+                <p>Gerandomiseerde trial waarbij patiënten met een longontsteking thuis behandeld worden, in plaats van opgenomen in het ziekenhuis. Vitale functies worden 24/7 thuis gemonitord (hartfrequentie, bloeddruk, saturatie, ademhalingsfrequentie, temperatuur en activiteit).</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>Het onderzoek brengt in kaart welke patiënten veilig thuis behandeld kunnen worden, welke randvoorwaarden de wijkverpleging daarvoor nodig heeft en wat het oplevert voor zowel patiënt als zorgsysteem.</p>
+                </details>
+            </article>
+            </div>
+        </section>
+        <section class="section theme-section" data-theme-section="zorg-innovatie">
+            <h2>Zorginnovatie</h2>
+            <p class="theme-intro">Deze themalijn richt zich op het ontwikkelen, implementeren en opschalen van (technologische) innovaties die de wijkverpleging beter, slimmer en efficiënter maken.</p>
+            <div class="grid">
+                <article class="card" data-theme="zorg-innovatie" data-region="limburg">
+                <span class="meta">AWW Limburg</span>
+                <h3>Voice</h3>
+                <p>Spraakgestuurde verslaglegging in de VVT.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>Met spraaktechnologie kunnen zorgmedewerkers direct na een cliëntcontact hun observaties inspreken. Dat bespaart tijd achter het scherm en maakt verslagen completer en actueler.</p>
+                </details>
+            </article>
+                <article class="card" data-theme="zorg-innovatie" data-region="utrecht">
+                <span class="meta">AWW Utrecht</span>
+                <h3>GOUD</h3>
+                <p>Geïntegreerde Ondersteuning voor multidisciplinaire Uitrol van Datagedreven zorg in verpleeg- en verzorgingshuizen en thuiszorg.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>Het project onderzoekt hoe zorgorganisaties datagedreven werken kunnen invoeren op een manier die aansluit bij professionals, cliënten en bestaande werkprocessen.</p>
+                </details>
+            </article>
+                <article class="card" data-theme="zorg-innovatie" data-region="utrecht">
+                <span class="meta">AWW Utrecht</span>
+                <h3>PIONEER</h3>
+                <p>Focus op stoppen met niet bewezen effectieve urologische handelingen.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>Door in kaart te brengen welke handelingen zonder toegevoegde waarde worden verricht, wordt gewerkt aan afbouw van onnodige zorg zonder afbreuk te doen aan kwaliteit of veiligheid voor de cliënt.</p>
+                </details>
+            </article>
+                <article class="card" data-theme="zorg-innovatie" data-region="utrecht">
+                <span class="meta">AWW Utrecht</span>
+                <h3>LEARN</h3>
+                <p>Kwaliteitsstandaarden voor eenzaamheid en mantelzorgbelasting.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>Het project werkt aan handvatten waarmee wijkverpleegkundigen eenzaamheid en overbelasting van mantelzorgers eerder signaleren, bespreekbaar maken en passende ondersteuning organiseren.</p>
+                </details>
+            </article>
+                <article class="card" data-theme="zorg-innovatie" data-region="utrecht">
+                <span class="meta">AWW Utrecht</span>
+                <h3>Data Nurse</h3>
+                <p>Datagedreven ondersteuning voor zelfredzaamheid cliënten.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>Door gebruik te maken van beschikbare zorg- en gezondheidsdata kunnen wijkverpleegkundigen gerichter inzetten op wat cliënten nodig hebben om zelfstandig te blijven functioneren.</p>
+                </details>
+            </article>
+                <article class="card" data-theme="zorg-innovatie" data-region="limburg">
+                <span class="meta">AWW Limburg</span>
+                <h3>Living Lab Hambos</h3>
+                <p>Project 'Netwerk Werkt!' in Kerkrade.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>In een wijkgerichte praktijkomgeving werken zorgprofessionals, bewoners en partners samen aan innovaties die direct worden getest, bijgesteld en breder toegepast binnen het regionale netwerk.</p>
+                </details>
+            </article>
+                <article class="card" data-theme="zorg-innovatie" data-region="limburg">
+                <span class="meta">AWW Limburg</span>
+                <h3>Blended Care at Home</h3>
+                <p>Praktische handreiking voor organisaties.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>De handreiking ondersteunt zorgorganisaties bij het combineren van digitale en fysieke zorg thuis, met concrete stappen voor implementatie en aandacht voor wat het vraagt van medewerkers en cliënten.</p>
+                </details>
+            </article>
+            </div>
+        </section>
+        <section class="section theme-section" data-theme-section="zorg-professionals">
+            <h2>Zorgprofessionals</h2>
+            <p class="theme-intro">In dit thema staat het versterken van de rol van de professional centraal: professionele autonomie, passende functies, behoud van zorgmedewerkers, en samenwerking tussen disciplines en niveaus.</p>
+            <div class="grid">
+                <article class="card" data-theme="zorg-professionals" data-region="noord">
+                <span class="meta">AWW Noord</span>
+                <h3>Aansluiting onderwijs en praktijk</h3>
+                <p>We brengen het beeld van mbo-v- en hbo-v-studenten en docenten in kaart en gaan in gesprek met onderwijs en wijkverpleging om te verkennen hoe het curriculum en de stagebegeleiding verder versterkt kunnen worden.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>De uitkomsten worden gebundeld in concrete aanbevelingen en handvatten voor opleidingen en zorgorganisaties, zodat opleidingsroutes en stageplekken in de wijkverpleging aantrekkelijker en beter passend worden voor zowel studenten als de praktijk.</p>
+                </details>
+            </article>
+                <article class="card" data-theme="zorg-professionals" data-region="limburg">
+                <span class="meta">AWW Limburg</span>
+                <h3>Praktijkvariatie in indicatiestelling</h3>
+                <p>Er zijn signalen dat wijkverpleegkundigen bij vergelijkbare cliënten verschillende zorg indiceren. Het onderzoek brengt deze praktijkvariatie in kaart en biedt aanknopingspunten om de indicatiestelling te verbeteren en ongewenste praktijkvariatie te verminderen.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>De bevindingen worden gedeeld met wijkverpleegkundigen, opleidingen en zorgorganisaties, met het doel bij te dragen aan een meer uniforme en onderbouwde indicatiestelling — gericht op kwaliteit van zorg en doelmatige inzet van capaciteit.</p>
+                </details>
+            </article>
+                <article class="card" data-theme="zorg-professionals" data-region="limburg">
+                <span class="meta">AWW Limburg</span>
+                <h3>Handreiking probleemgedrag in de wijk</h3>
+                <p>Ontwikkeling van een handreiking voor verpleegkundigen en verzorgenden bij probleemgedrag in de wijk. De handreiking bundelt kennis, praktijkervaring en gerichte adviezen zodat professionals probleemgedrag eerder kunnen herkennen en passend kunnen reageren in de thuissituatie.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>Daarbij wordt nadrukkelijk aangesloten bij ervaringen van wijkteams en mantelzorgers, zodat de handreiking aansluit op wat in de dagelijkse praktijk nodig is.</p>
+                </details>
+            </article>
+                <article class="card" data-theme="zorg-professionals" data-region="noord-holland">
+                <span class="meta">AWW Noord Holland</span>
+                <h3>Leren en ontwikkelen in de wijk</h3>
+                <p>Uit onderzoek van de MBO Raad blijkt dat het aantal afgestudeerde mbo-verpleegkundigen en verzorgenden IG dat instroomt in de zorg beperkt is. Veel studenten richten zich bij de start van hun opleiding vooral op de intramurale zorg.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>De wijkzorg is onder studenten nog relatief onbekend. Dat vraagt om aandacht voor de wijkverpleging in het mbo- en hbo-onderwijs.</p>
+                    <p>De Academische Werkplaats Wijkverpleging Noord-Holland heeft drie Lecturer Practitioners aangesteld om de verbinding tussen onderzoek, onderwijs en de praktijk in de wijkzorg te versterken. Zorgmedewerkers, studenten en docenten werken samen aan het ontwikkelen en onderzoeken van nieuwe manieren om de zorg in de wijk te verbeteren.</p>
+                </details>
+            </article>
+                <article class="card" data-theme="zorg-professionals" data-region="noord-holland">
+                <span class="meta">AWW Noord Holland</span>
+                <h3>Onderzoek Volledig Pakket Thuis (VPT)</h3>
+                <p>De komende jaren neemt het aantal kwetsbare ouderen met een langdurige zorgvraag toe. Ouderen hebben vaak de wens om zelfstandig thuis te blijven wonen. Het Volledig Pakket Thuis (VPT) biedt o.a. verpleging, persoonlijke verzorging, welzijn, huishoudelijke hulp, persoonsalarmering en maaltijden.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <h4>Doel</h4>
+                    <ul>
+                        <li>Het in kaart brengen van de ervaringen van zorgprofessionals, cliënten en mantelzorgers.</li>
+                        <li>Het in kaart brengen van de organisatie van VPT-zorg.</li>
+                        <li>Het doorontwikkelen van VPT-zorg op basis van bovenstaande bevindingen.</li>
+                    </ul>
+                    <h4>Methode</h4>
+                    <p>In interviews met zorgprofessionals, cliënten en mantelzorgers wordt gevraagd naar ervaringen. Daarnaast een online vragenlijst voor managers/beleidsmakers. In najaar 2025 wordt een pilot opgezet voor de doorontwikkeling van het VPT binnen enkele zorgteams van deelnemende organisaties.</p>
+                </details>
+            </article>
+                <article class="card" data-theme="zorg-professionals" data-region="nijmegen">
+                <span class="meta">AWW Nijmegen</span>
+                <h3>LOUIS — Leren en Ontwikkelen van infectiepreventie in de thuissituatie</h3>
+                <p>In de wijkverpleging neemt 'invasieve' zorg toe (infuuszorg, complexe wondzorg, urinewegkatheters, peritoneale dialyse, thuisbeademing) en groeit de antimicrobiële resistentie.</p>
+                <details>
+                    <summary>Meer informatie</summary>
+                    <p>De verwachting is dat in 2050 antimicrobiële resistentie weer in de top 5 van meest voorkomende doodsoorzaken staat.</p>
+                    <h4>Doel — ten aanzien van handhygiëne en Goed Gebruik Handschoenen (GGH)</h4>
+                    <ul>
+                        <li>Het verbeteren van het onderwijs voor studenten verpleegkundige (HBO-V).</li>
+                        <li>Het verbeteren van de kennis van zorgmedewerkers.</li>
+                        <li>Inzicht verkrijgen in de naleving door het formuleren en testen van een stage-opdracht op uitvoerbaarheid, acceptabiliteit, haalbaarheid en schaalbaarheid.</li>
+                    </ul>
+                    <p>Resultaten worden teruggekoppeld naar onderwijspartners en zorgorganisaties, zodat aandacht voor infectiepreventie structureel wordt verankerd in opleiding én praktijk van de wijkverpleging.</p>
+                </details>
+            </article>
+            </div>
+        </section>
+
+        <div class="empty-state" id="empty-state" hidden>
+            <h2>Geen projecten gevonden</h2>
+            <p>Er zijn nog geen projecten bekend voor deze combinatie van themalijn en regio. Wis een filter om meer projecten te zien.</p>
+            <a href="projecten.html" class="button">Toon alle projecten</a>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>Academische Werkplaatsen Wijkverpleging</h4>
+                <p>Vijf regionale werkplaatsen werken samen aan kennisontwikkeling, innovatie en onderwijs voor de wijkverpleging in Nederland.</p>
+            </div>
+            <div>
+                <h4>Sitemap</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projecten.html">Projecten</a></li>
+                    <li><a href="regionale-partners.html">Regionale partners</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Juridisch</h4>
+                <ul>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Toegankelijkheid</a></li>
+                    <li><a href="#">Privacyverklaring</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copy">&copy; 2026 Academische Werkplaatsen Wijkverpleging Nederland</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+(function() {
+    const THEME_NAMES = {
+        'client-centraal': "Cliënt Centraal",
+        'wijkgerichte-preventie': "Wijkgerichte preventie",
+        'zorg-innovatie': "Zorginnovatie",
+        'zorg-professionals': "Zorgprofessionals"
+    };
+    const REGION_NAMES = {
+        'noord': 'AWW Noord',
+        'noord-holland': 'AWW Noord-Holland',
+        'utrecht': 'AWW Utrecht',
+        'nijmegen': 'AWW Nijmegen',
+        'limburg': 'AWW Limburg'
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const selectedTheme = params.get('thema');
+    const selectedRegion = params.get('regio');
+
+    const themeSections = document.querySelectorAll('[data-theme-section]');
+    const allCards = document.querySelectorAll('[data-theme][data-region]');
+    const themePills = document.querySelectorAll('[data-theme-pill]');
+    const regionPills = document.querySelectorAll('[data-region-pill]');
+    const title = document.getElementById('page-title');
+    const subtitle = document.getElementById('page-subtitle');
+    const status = document.getElementById('filter-status');
+    const emptyState = document.getElementById('empty-state');
+
+    // Build URL with both params preserved
+    function pillUrl(themeOverride, regionOverride) {
+        const p = new URLSearchParams();
+        const t = themeOverride !== undefined ? themeOverride : selectedTheme;
+        const r = regionOverride !== undefined ? regionOverride : selectedRegion;
+        if (t) p.set('thema', t);
+        if (r) p.set('regio', r);
+        const q = p.toString();
+        return q ? ('?' + q) : 'projecten.html';
+    }
+    // Set pill URLs so they preserve the other filter dimension
+    themePills.forEach(p => {
+        const slug = p.dataset.themePill;
+        p.href = pillUrl(slug === 'all' ? null : slug, undefined);
+    });
+    regionPills.forEach(p => {
+        const slug = p.dataset.regionPill;
+        p.href = pillUrl(undefined, slug === 'all' ? null : slug);
+    });
+
+    // Mark active pills
+    themePills.forEach(p => {
+        const isActive = (p.dataset.themePill === selectedTheme) || (!selectedTheme && p.dataset.themePill === 'all');
+        if (isActive) { p.classList.add('is-active'); p.setAttribute('aria-current','page'); }
+    });
+    regionPills.forEach(p => {
+        const isActive = (p.dataset.regionPill === selectedRegion) || (!selectedRegion && p.dataset.regionPill === 'all');
+        if (isActive) { p.classList.add('is-active'); p.setAttribute('aria-current','page'); }
+    });
+
+    // Filter cards
+    let visibleCount = 0;
+    allCards.forEach(card => {
+        const themeMatch = !selectedTheme || card.dataset.theme === selectedTheme;
+        const regionMatch = !selectedRegion || card.dataset.region === selectedRegion;
+        if (themeMatch && regionMatch) {
+            card.style.display = '';
+            visibleCount++;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+    // Hide theme sections with no visible cards
+    themeSections.forEach(section => {
+        const visible = section.querySelectorAll('[data-region]:not([style*="display: none"])');
+        // count visible by checking the cards
+        let count = 0;
+        section.querySelectorAll('[data-region]').forEach(c => { if (c.style.display !== 'none') count++; });
+        section.style.display = count > 0 ? '' : 'none';
+    });
+
+    // Title + subtitle
+    const themeName = selectedTheme ? THEME_NAMES[selectedTheme] : null;
+    const regionName = selectedRegion ? REGION_NAMES[selectedRegion] : null;
+    if (themeName && regionName) {
+        title.textContent = themeName + ' — ' + regionName;
+    } else if (themeName) {
+        title.textContent = themeName;
+    } else if (regionName) {
+        title.textContent = 'Projecten — ' + regionName;
+    }
+
+    // Status line
+    let statusParts = [];
+    if (themeName) statusParts.push('thema <strong>' + themeName + '</strong>');
+    if (regionName) statusParts.push('regio <strong>' + regionName + '</strong>');
+    if (statusParts.length) {
+        const projectWord = visibleCount === 1 ? 'project' : 'projecten';
+        status.innerHTML = visibleCount + ' ' + projectWord + ' gevonden voor ' + statusParts.join(' + ');
+    } else {
+        const projectWord = visibleCount === 1 ? 'project' : 'projecten';
+        status.innerHTML = visibleCount + ' ' + projectWord + ' in totaal — gebruik de filters hierboven om gericht te zoeken.';
+    }
+
+    // Empty state
+    if (visibleCount === 0) {
+        emptyState.hidden = false;
+    } else {
+        emptyState.hidden = true;
+    }
+})();
+</script>
+</body>
+</html>
