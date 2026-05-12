@@ -442,48 +442,38 @@
         section.style.display = count > 0 ? '' : 'none';
     });
 
-    // Compute counts per pill (cross-filtered with the OTHER dimension)
-    // Theme pills: count cards in that theme that match the current region filter
+    // Compute counts per pill (cross-filtered with the OTHER dimension).
+    // The "Alle ..." pills do not show a count — the total is in the status line.
     themePills.forEach(pill => {
         const slug = pill.dataset.themePill;
-        let n;
-        if (slug === 'all') {
-            n = Array.from(allCards).filter(c =>
-                !selectedRegion || c.dataset.region === selectedRegion
-            ).length;
-        } else {
-            n = Array.from(allCards).filter(c =>
-                c.dataset.theme === slug &&
-                (!selectedRegion || c.dataset.region === selectedRegion)
-            ).length;
-        }
         const countEl = pill.querySelector('.pill-count');
+        if (slug === 'all') {
+            if (countEl) countEl.remove();
+            return;
+        }
+        const n = Array.from(allCards).filter(c =>
+            c.dataset.theme === slug &&
+            (!selectedRegion || c.dataset.region === selectedRegion)
+        ).length;
         if (countEl) countEl.textContent = n;
-        pill.dataset.count = n;
-        // dim pills with zero matches (but keep clickable)
         if (n === 0 && !pill.classList.contains('is-active')) {
             pill.classList.add('is-empty');
         } else {
             pill.classList.remove('is-empty');
         }
     });
-    // Region pills: count cards in that region that match the current theme filter
     regionPills.forEach(pill => {
         const slug = pill.dataset.regionPill;
-        let n;
-        if (slug === 'all') {
-            n = Array.from(allCards).filter(c =>
-                !selectedTheme || c.dataset.theme === selectedTheme
-            ).length;
-        } else {
-            n = Array.from(allCards).filter(c =>
-                c.dataset.region === slug &&
-                (!selectedTheme || c.dataset.theme === selectedTheme)
-            ).length;
-        }
         const countEl = pill.querySelector('.pill-count');
+        if (slug === 'all') {
+            if (countEl) countEl.remove();
+            return;
+        }
+        const n = Array.from(allCards).filter(c =>
+            c.dataset.region === slug &&
+            (!selectedTheme || c.dataset.theme === selectedTheme)
+        ).length;
         if (countEl) countEl.textContent = n;
-        pill.dataset.count = n;
         if (n === 0 && !pill.classList.contains('is-active')) {
             pill.classList.add('is-empty');
         } else {
