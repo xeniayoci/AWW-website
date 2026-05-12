@@ -1063,7 +1063,7 @@ main { padding-bottom: 5rem; }
 .site-footer a:hover { color: #fff; text-decoration: underline; }
 .site-footer .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 3rem;
     margin-bottom: 2.5rem;
 }
@@ -1087,7 +1087,7 @@ main { padding-bottom: 5rem; }
 
 /* Responsive */
 @media (max-width: 960px) {
-    .site-footer .footer-grid { grid-template-columns: 1fr 1fr; }
+    .site-footer .footer-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 860px) {
     .hero { padding: 3.5rem 0 2.5rem; }
