@@ -40,27 +40,33 @@
         <div class="filter-group" aria-label="Filter op themalijn">
             <span class="filter-label">Themalijn:</span>
             <ul class="filter-pills">
-                <li><a href="?" class="filter-pill filter-pill-all" data-theme-pill="all">Alle thema's</a></li>
-                <li><a href="?thema=client-centraal" class="filter-pill" data-theme-pill="client-centraal">Cliënt Centraal</a></li>
-                <li><a href="?thema=wijkgerichte-preventie" class="filter-pill" data-theme-pill="wijkgerichte-preventie">Wijkgerichte preventie</a></li>
-                <li><a href="?thema=zorg-innovatie" class="filter-pill" data-theme-pill="zorg-innovatie">Zorginnovatie</a></li>
-                <li><a href="?thema=zorg-professionals" class="filter-pill" data-theme-pill="zorg-professionals">Zorgprofessionals</a></li>
+                <li><a href="?" class="filter-pill filter-pill-all" data-theme-pill="all">Alle thema's<span class="pill-count" aria-hidden="true"></span></a></li>
+                <li><a href="?thema=client-centraal" class="filter-pill" data-theme-pill="client-centraal">Cliënt Centraal<span class="pill-count" aria-hidden="true"></span></a></li>
+                <li><a href="?thema=wijkgerichte-preventie" class="filter-pill" data-theme-pill="wijkgerichte-preventie">Wijkgerichte preventie<span class="pill-count" aria-hidden="true"></span></a></li>
+                <li><a href="?thema=zorg-innovatie" class="filter-pill" data-theme-pill="zorg-innovatie">Zorginnovatie<span class="pill-count" aria-hidden="true"></span></a></li>
+                <li><a href="?thema=zorg-professionals" class="filter-pill" data-theme-pill="zorg-professionals">Zorgprofessionals<span class="pill-count" aria-hidden="true"></span></a></li>
             </ul>
         </div>
 
         <div class="filter-group" aria-label="Filter op regio">
             <span class="filter-label">Regio:</span>
             <ul class="filter-pills">
-                <li><a href="?" class="filter-pill filter-pill-all" data-region-pill="all">Alle regio's</a></li>
-                <li><a href="?regio=noord-holland" class="filter-pill" data-region-pill="noord-holland"><span class="pill-dot" style="background:#D55E00"></span>AWW Noord-Holland</a></li>
-                <li><a href="?regio=noord" class="filter-pill" data-region-pill="noord"><span class="pill-dot" style="background:#0072B2"></span>AWW Noord</a></li>
-                <li><a href="?regio=utrecht" class="filter-pill" data-region-pill="utrecht"><span class="pill-dot" style="background:#009E73"></span>AWW Utrecht</a></li>
-                <li><a href="?regio=nijmegen" class="filter-pill" data-region-pill="nijmegen"><span class="pill-dot" style="background:#E69F00"></span>AWW Nijmegen</a></li>
-                <li><a href="?regio=limburg" class="filter-pill" data-region-pill="limburg"><span class="pill-dot" style="background:#CC79A7"></span>AWW Limburg</a></li>
+                <li><a href="?" class="filter-pill filter-pill-all" data-region-pill="all">Alle regio's<span class="pill-count" aria-hidden="true"></span></a></li>
+                <li><a href="?regio=noord-holland" class="filter-pill" data-region-pill="noord-holland"><span class="pill-dot" style="background:#D55E00"></span>AWW Noord-Holland<span class="pill-count" aria-hidden="true"></span></a></li>
+                <li><a href="?regio=noord" class="filter-pill" data-region-pill="noord"><span class="pill-dot" style="background:#0072B2"></span>AWW Noord<span class="pill-count" aria-hidden="true"></span></a></li>
+                <li><a href="?regio=utrecht" class="filter-pill" data-region-pill="utrecht"><span class="pill-dot" style="background:#009E73"></span>AWW Utrecht<span class="pill-count" aria-hidden="true"></span></a></li>
+                <li><a href="?regio=nijmegen" class="filter-pill" data-region-pill="nijmegen"><span class="pill-dot" style="background:#E69F00"></span>AWW Nijmegen<span class="pill-count" aria-hidden="true"></span></a></li>
+                <li><a href="?regio=limburg" class="filter-pill" data-region-pill="limburg"><span class="pill-dot" style="background:#CC79A7"></span>AWW Limburg<span class="pill-count" aria-hidden="true"></span></a></li>
             </ul>
         </div>
 
-        <p class="filter-status" id="filter-status" aria-live="polite"></p>
+        <div class="filter-meta">
+            <p class="filter-status" id="filter-status" aria-live="polite"></p>
+            <a href="projecten.html" class="filter-clear" id="filter-clear" hidden>
+                <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 3 L11 11 M11 3 L3 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                Wis filters
+            </a>
+        </div>
     </div>
 </div>
 
@@ -431,12 +437,67 @@
     });
     // Hide theme sections with no visible cards
     themeSections.forEach(section => {
-        const visible = section.querySelectorAll('[data-region]:not([style*="display: none"])');
-        // count visible by checking the cards
         let count = 0;
         section.querySelectorAll('[data-region]').forEach(c => { if (c.style.display !== 'none') count++; });
         section.style.display = count > 0 ? '' : 'none';
     });
+
+    // Compute counts per pill (cross-filtered with the OTHER dimension)
+    // Theme pills: count cards in that theme that match the current region filter
+    themePills.forEach(pill => {
+        const slug = pill.dataset.themePill;
+        let n;
+        if (slug === 'all') {
+            n = Array.from(allCards).filter(c =>
+                !selectedRegion || c.dataset.region === selectedRegion
+            ).length;
+        } else {
+            n = Array.from(allCards).filter(c =>
+                c.dataset.theme === slug &&
+                (!selectedRegion || c.dataset.region === selectedRegion)
+            ).length;
+        }
+        const countEl = pill.querySelector('.pill-count');
+        if (countEl) countEl.textContent = n;
+        pill.dataset.count = n;
+        // dim pills with zero matches (but keep clickable)
+        if (n === 0 && !pill.classList.contains('is-active')) {
+            pill.classList.add('is-empty');
+        } else {
+            pill.classList.remove('is-empty');
+        }
+    });
+    // Region pills: count cards in that region that match the current theme filter
+    regionPills.forEach(pill => {
+        const slug = pill.dataset.regionPill;
+        let n;
+        if (slug === 'all') {
+            n = Array.from(allCards).filter(c =>
+                !selectedTheme || c.dataset.theme === selectedTheme
+            ).length;
+        } else {
+            n = Array.from(allCards).filter(c =>
+                c.dataset.region === slug &&
+                (!selectedTheme || c.dataset.theme === selectedTheme)
+            ).length;
+        }
+        const countEl = pill.querySelector('.pill-count');
+        if (countEl) countEl.textContent = n;
+        pill.dataset.count = n;
+        if (n === 0 && !pill.classList.contains('is-active')) {
+            pill.classList.add('is-empty');
+        } else {
+            pill.classList.remove('is-empty');
+        }
+    });
+
+    // Show "Wis filters" link if any filter is active
+    const clearBtn = document.getElementById('filter-clear');
+    if (selectedTheme || selectedRegion) {
+        clearBtn.hidden = false;
+    } else {
+        clearBtn.hidden = true;
+    }
 
     // Title + subtitle
     const themeName = selectedTheme ? THEME_NAMES[selectedTheme] : null;
