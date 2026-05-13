@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projecten — Academische Werkplaatsen Wijkverpleging</title>
+    <title>Projecten | Academische Werkplaatsen Wijkverpleging</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -87,8 +87,8 @@
             </article>
                 <article class="card" data-theme="client-centraal" data-region="limburg">
                 <span class="meta">AWW Limburg</span>
-                <h3>Accent — kennis &amp; kunde over essentiële zorg</h3>
-                <p>Het bekrachtigen van gedrag, competenties en professionaliteit van verpleegkundigen en verzorgenden om, tijdens de ADL-zorg, de autonomie van de oudere cliënt centraal te stellen. Betrokkenheid van professionals uit ziekenhuis, verpleeghuis en wijkzorg (niveaus 2–8).</p>
+                <h3>Accent: kennis &amp; kunde over essentiële zorg</h3>
+                <p>Het bekrachtigen van gedrag, competenties en professionaliteit van verpleegkundigen en verzorgenden om, tijdens de ADL-zorg, de autonomie van de oudere cliënt centraal te stellen. Betrokkenheid van professionals uit ziekenhuis, verpleeghuis en wijkzorg (niveaus 2 tot 8).</p>
                 <details>
                     <summary>Meer informatie</summary>
                     <p>Door deze brede samenwerking tussen zorgsectoren en opleidingsniveaus wordt kennis over essentiële zorg structureel verankerd in zowel de praktijk als het onderwijs.</p>
@@ -96,7 +96,7 @@
             </article>
                 <article class="card" data-theme="client-centraal" data-region="utrecht">
                 <span class="meta">AWW Utrecht</span>
-                <h3>Redsaam — samen werken aan zelfredzaamheid</h3>
+                <h3>Redsaam: samen werken aan zelfredzaamheid</h3>
                 <p>Focus op zelfredzaamheid en eigen regie van ouderen thuis. Binnen vijf jaar is er een gezamenlijk gedragen programmatische netwerkaanpak ontwikkeld en geëvalueerd.</p>
                 <details>
                     <summary>Meer informatie</summary>
@@ -268,7 +268,7 @@
                 <p>Er zijn signalen dat wijkverpleegkundigen bij vergelijkbare cliënten verschillende zorg indiceren. Het onderzoek brengt deze praktijkvariatie in kaart en biedt aanknopingspunten om de indicatiestelling te verbeteren en ongewenste praktijkvariatie te verminderen.</p>
                 <details>
                     <summary>Meer informatie</summary>
-                    <p>De bevindingen worden gedeeld met wijkverpleegkundigen, opleidingen en zorgorganisaties, met het doel bij te dragen aan een meer uniforme en onderbouwde indicatiestelling — gericht op kwaliteit van zorg en doelmatige inzet van capaciteit.</p>
+                    <p>De bevindingen worden gedeeld met wijkverpleegkundigen, opleidingen en zorgorganisaties, met het doel bij te dragen aan een meer uniforme en onderbouwde indicatiestelling, gericht op kwaliteit van zorg en doelmatige inzet van capaciteit.</p>
                 </details>
             </article>
                 <article class="card" data-theme="zorg-professionals" data-region="limburg">
@@ -308,12 +308,12 @@
             </article>
                 <article class="card" data-theme="zorg-professionals" data-region="nijmegen">
                 <span class="meta">AWW Nijmegen</span>
-                <h3>LOUIS — Leren en Ontwikkelen van infectiepreventie in de thuissituatie</h3>
+                <h3>LOUIS: Leren en Ontwikkelen van infectiepreventie in de thuissituatie</h3>
                 <p>In de wijkverpleging neemt 'invasieve' zorg toe (infuuszorg, complexe wondzorg, urinewegkatheters, peritoneale dialyse, thuisbeademing) en groeit de antimicrobiële resistentie.</p>
                 <details>
                     <summary>Meer informatie</summary>
                     <p>De verwachting is dat in 2050 antimicrobiële resistentie weer in de top 5 van meest voorkomende doodsoorzaken staat.</p>
-                    <h4>Doel — ten aanzien van handhygiëne en Goed Gebruik Handschoenen (GGH)</h4>
+                    <h4>Doel: ten aanzien van handhygiëne en Goed Gebruik Handschoenen (GGH)</h4>
                     <ul>
                         <li>Het verbeteren van het onderwijs voor studenten verpleegkundige (HBO-V).</li>
                         <li>Het verbeteren van de kennis van zorgmedewerkers.</li>
@@ -348,14 +348,6 @@
                     <li><a href="regionale-partners.html">Regionale partners</a></li>
                     <li><a href="team.html">Team</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Juridisch</h4>
-                <ul>
-                    <li><a href="#">Disclaimer</a></li>
-                    <li><a href="#">Toegankelijkheid</a></li>
-                    <li><a href="#">Privacyverklaring</a></li>
                 </ul>
             </div>
         </div>
@@ -443,7 +435,7 @@
     });
 
     // Compute counts per pill (cross-filtered with the OTHER dimension).
-    // The "Alle ..." pills do not show a count — the total is in the status line.
+    // The "Alle ..." pills do not show a count, the total is in the status line.
     themePills.forEach(pill => {
         const slug = pill.dataset.themePill;
         const countEl = pill.querySelector('.pill-count');
@@ -493,11 +485,11 @@
     const themeName = selectedTheme ? THEME_NAMES[selectedTheme] : null;
     const regionName = selectedRegion ? REGION_NAMES[selectedRegion] : null;
     if (themeName && regionName) {
-        title.textContent = themeName + ' — ' + regionName;
+        title.textContent = themeName + ' · ' + regionName;
     } else if (themeName) {
         title.textContent = themeName;
     } else if (regionName) {
-        title.textContent = 'Projecten — ' + regionName;
+        title.textContent = 'Projecten · ' + regionName;
     }
 
     // Status line
@@ -509,7 +501,7 @@
         status.innerHTML = visibleCount + ' ' + projectWord + ' gevonden voor ' + statusParts.join(' + ');
     } else {
         const projectWord = visibleCount === 1 ? 'project' : 'projecten';
-        status.innerHTML = visibleCount + ' ' + projectWord + ' in totaal — gebruik de filters hierboven om gericht te zoeken.';
+        status.innerHTML = visibleCount + ' ' + projectWord + ' in totaal. Gebruik de filters hierboven om gericht te zoeken.';
     }
 
     // Empty state
